@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travaux</title>
+    <link rel="stylesheet" href="travaux.css">
+    <script src="https://kit.fontawesome.com/2f3dd775f5.js" crossorigin="anonymous">
+    </script>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Fin Leaflet -->
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.jpg" id="logo" alt="Travaux">
+        <h1>Travaux et itinéraires du Grand Nancy</h1>
+        <a href="travaux.html">Voir la carte</a>
+    </header>
+    <main id="page1">
+        <aside>
+            <fieldset id="aside">
+                <legend>Rechercher Par</legend>
+                <section class="filterP1">
+                    <label for="shortDescriptionFilter">Type :</label>
+                    <select id="shortDescriptionFilter">
+                        <option value="all">Tout afficher</option>
+                    </select>
+                </section>
+                <section class="filterP1">
+                    <label for="descriptionFilter">Description :</label>
+                    <select id="descriptionFilter">
+                        <option value="all">Tout afficher</option>
+                    </select>
+                </section>
+                <section class="filterP1">
+                    <label for="rueFilter">Lieu :</label>
+                    <select id="rueFilter">
+                        <option value="all">Tout afficher</option>
+                    </select>
+                </section>
+                <section class="filterP1">
+                    <label for="date">Date :</label>
+                <input type="date" id="start" name="trip-start" value="all" min="0"
+                    max="2099-12-31"/>
+                </section>
+            </fieldset>
+        </aside>
+
+        <article id="data-container">
+            <!-- Les éléments filtrés seront affichés ici -->
+        </article>
+    </main>
+    <footer>
+        <span>Données originales téléchargées <a
+                href="https://www.datagrandest.fr/data4citizen/visualisation/information/?id=1642070072496-1">ici</a></span>
+    </footer>
+
+    <script type="text/javascript" src="detailTravaux.js"></script>
+</body>
+
+</html>
